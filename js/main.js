@@ -4,7 +4,7 @@ const play = document.getElementById('play');
 
 if(localStorage.getItem("id") === "1" ){
     play.addEventListener('click', ()=>{
-        imagen.src = "/img/test.png";
+        imagen.src = "img/test.png";
         imagen.classList.add("mensaje");
         main.appendChild(imagen);
         main.removeChild(play);
