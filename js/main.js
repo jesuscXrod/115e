@@ -2,9 +2,9 @@ const main = document.getElementById('main');
 let imagen = document.createElement('img');
 const play = document.getElementById('play');
 
+imagen.src = "img/test.png";
+imagen.classList.add("mensaje");
 play.addEventListener('click', ()=>{
-    imagen.src = "img/test.png";
-    imagen.classList.add("mensaje");
     main.appendChild(imagen);
     main.removeChild(play);
     localStorage.setItem("id", "1")
