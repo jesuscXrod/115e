@@ -1,16 +1,20 @@
 const main = document.getElementById('main');
-const imagen = document.createElement('img');
+let imagen = document.createElement('img');
 const play = document.getElementById('play');
 
-
-
-play.addEventListener('click', ()=>{
-    imagen.src = "../img/jesus-es-el-vergatario.png";
-    imagen.setAttribute("id","test");
-    main.appendChild(imagen);
-
-    setTimeout(()=>{
-        main.removeChild(imagen);
-        console.log("perdiste")
-    },60000);
-});
+if(localStorage.getItem("id") === "1" ){
+    main.removeChild(play);
+    alert('El mensaje estuvo en tus ojos')
+}else if(localStorage.getItem("id") === null ){
+    play.addEventListener('click', ()=>{
+        imagen.src = "../img/test.png";
+        imagen.classList.add("mensaje");
+        main.appendChild(imagen);
+        main.removeChild(play);
+        localStorage.setItem("id", "1")
+    
+        setTimeout(()=>{
+            main.removeChild(imagen);
+        },60000);
+    });
+}

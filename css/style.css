@@ -7,4 +7,20 @@
 }
 body{
     background-color: #070C0B;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+#play{
+    background-color: #070C0B;
+    border: 1px solid #ED1C24;
+    color: #17BEBB;
+    cursor: pointer;
+    display: flex;
+    margin: 5% auto;
+    padding: 1%;
+}
+.mensaje{
+    display: block;
+    margin: 10% auto;
 }
